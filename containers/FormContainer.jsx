@@ -23,7 +23,6 @@ class FormContainer extends Component {
 
       genderOptions: ["Male", "Female", "Others"],
       likeOptions: ["Like", "Dislike"]
-      /*skillOptions: ["Programming", "Development", "Design", "Testing"]*/
     };
     this.handleTextArea = this.handleTextArea.bind(this);
     this.handleAge = this.handleAge.bind(this);
@@ -34,7 +33,7 @@ class FormContainer extends Component {
     this.handleInput = this.handleInput.bind(this);
   }
 
-  /* This lifecycle hook gets executed when the component mounts */
+  /* This gets executed when the component is initialised */
 
   handleFullName(e) {
     let value = e.target.value;
@@ -142,10 +141,6 @@ class FormContainer extends Component {
   render() {
     return (
       <form className="container-fluid" onSubmit={this.handleFormSubmit}>
-        {
-          //row
-          //column 12
-        }
         <TextArea
           title={""}
           rows={10}
@@ -193,14 +188,6 @@ class FormContainer extends Component {
           handleChange={this.handleInput}
         />{" "}
         {/* Age Selection */}
-        {/*<CheckBox
-          title={"Skills"}
-          name={"skills"}
-          options={this.state.skillOptions}
-          selectedOptions={this.state.newUser.skills}
-          handleChange={this.handleCheckBox}
-        />{" "}
-        {/* Skill */}
 
         {/* About you */}
         <Button
